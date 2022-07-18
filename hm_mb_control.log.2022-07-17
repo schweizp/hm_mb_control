@@ -28842,3 +28842,20 @@ AssertionError
 2022-07-18 15:23:20,448 - hm_mb_control - MainThread - INFO - hm-mb-control:273 - ++ PV power setpoint: 7400
 2022-07-18 15:23:20,449 - hm_mb_control - MainThread - INFO - hm-mb-control:274 - ++ Write 100% to 0xc001
 2022-07-18 15:23:20,673 - hm_mb_control - MainThread - INFO - hm-mb-control:276 - ++ Response: WriteRegisterResponse 49153 => 100
+2022-07-18 15:23:30,682 - hm_mb_control - MainThread - INFO - hm-mb-control:385 - get input variables from Victron
+2022-07-18 15:23:30,700 - hm_mb_control - MainThread - INFO - hm-mb-control:216 - ++ SOC: 98
+2022-07-18 15:23:30,705 - hm_mb_control - MainThread - INFO - hm-mb-control:217 - ++ Grid power L1: -792
+2022-07-18 15:23:30,706 - hm_mb_control - MainThread - INFO - hm-mb-control:218 - ++ Grid power L2: -554
+2022-07-18 15:23:30,707 - hm_mb_control - MainThread - INFO - hm-mb-control:219 - ++ Grid power L3: 1403
+2022-07-18 15:23:30,708 - hm_mb_control - MainThread - INFO - hm-mb-control:220 - ++ Grid power total: 57
+2022-07-18 15:23:30,709 - hm_mb_control - MainThread - INFO - hm-mb-control:221 - ++ AC out power L1: 1541
+2022-07-18 15:23:30,729 - hm_mb_control - MainThread - INFO - hm-mb-control:222 - ++ AC out power L2: 2074
+2022-07-18 15:23:30,729 - hm_mb_control - MainThread - INFO - hm-mb-control:223 - ++ AC out power L3: 3929
+2022-07-18 15:23:30,730 - hm_mb_control - MainThread - INFO - hm-mb-control:224 - ++ AC out power total: 7544
+2022-07-18 15:23:30,730 - hm_mb_control - MainThread - INFO - hm-mb-control:225 - ++ PV power L1: 917
+2022-07-18 15:23:30,730 - hm_mb_control - MainThread - INFO - hm-mb-control:226 - ++ PV power L2: 1160
+2022-07-18 15:23:30,730 - hm_mb_control - MainThread - INFO - hm-mb-control:227 - ++ PV power L3: 1129
+2022-07-18 15:23:30,730 - hm_mb_control - MainThread - INFO - hm-mb-control:228 - ++ PV power total: 3206
+2022-07-18 15:23:30,731 - hm_mb_control - MainThread - INFO - hm-mb-control:229 - ++ Charge power: -4196
+2022-07-18 15:23:30,731 - hm_mb_control - MainThread - INFO - hm-mb-control:230 - ++ Controller setpoint: 100
+2022-07-18 15:23:30,731 - hm_mb_control - MainThread - INFO - hm-mb-control:231 - ++ Controller status (controlling?): True
