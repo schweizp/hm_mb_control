@@ -28650,3 +28650,195 @@ AssertionError
 2022-07-18 15:21:58,583 - hm_mb_control - MainThread - INFO - hm-mb-control:273 - ++ PV power setpoint: 7475
 2022-07-18 15:21:58,583 - hm_mb_control - MainThread - INFO - hm-mb-control:274 - ++ Write 100% to 0xc001
 2022-07-18 15:21:58,811 - hm_mb_control - MainThread - INFO - hm-mb-control:276 - ++ Response: WriteRegisterResponse 49153 => 100
+2022-07-18 15:22:08,838 - hm_mb_control - MainThread - INFO - hm-mb-control:385 - get input variables from Victron
+2022-07-18 15:22:08,868 - hm_mb_control - MainThread - INFO - hm-mb-control:216 - ++ SOC: 99
+2022-07-18 15:22:08,869 - hm_mb_control - MainThread - INFO - hm-mb-control:217 - ++ Grid power L1: -770
+2022-07-18 15:22:08,869 - hm_mb_control - MainThread - INFO - hm-mb-control:218 - ++ Grid power L2: -509
+2022-07-18 15:22:08,870 - hm_mb_control - MainThread - INFO - hm-mb-control:219 - ++ Grid power L3: 1319
+2022-07-18 15:22:08,873 - hm_mb_control - MainThread - INFO - hm-mb-control:220 - ++ Grid power total: 40
+2022-07-18 15:22:08,874 - hm_mb_control - MainThread - INFO - hm-mb-control:221 - ++ AC out power L1: 1584
+2022-07-18 15:22:08,876 - hm_mb_control - MainThread - INFO - hm-mb-control:222 - ++ AC out power L2: 2084
+2022-07-18 15:22:08,877 - hm_mb_control - MainThread - INFO - hm-mb-control:223 - ++ AC out power L3: 3917
+2022-07-18 15:22:08,877 - hm_mb_control - MainThread - INFO - hm-mb-control:224 - ++ AC out power total: 7585
+2022-07-18 15:22:08,877 - hm_mb_control - MainThread - INFO - hm-mb-control:225 - ++ PV power L1: 916
+2022-07-18 15:22:08,877 - hm_mb_control - MainThread - INFO - hm-mb-control:226 - ++ PV power L2: 1153
+2022-07-18 15:22:08,878 - hm_mb_control - MainThread - INFO - hm-mb-control:227 - ++ PV power L3: 1119
+2022-07-18 15:22:08,878 - hm_mb_control - MainThread - INFO - hm-mb-control:228 - ++ PV power total: 3188
+2022-07-18 15:22:08,878 - hm_mb_control - MainThread - INFO - hm-mb-control:229 - ++ Charge power: -4306
+2022-07-18 15:22:08,878 - hm_mb_control - MainThread - INFO - hm-mb-control:230 - ++ Controller setpoint: 100
+2022-07-18 15:22:08,878 - hm_mb_control - MainThread - INFO - hm-mb-control:231 - ++ Controller status (controlling?): True
+2022-07-18 15:22:08,879 - hm_mb_control - MainThread - INFO - hm-mb-control:392 - SOC is 99! Control loop started...
+2022-07-18 15:22:08,879 - hm_mb_control - MainThread - INFO - hm-mb-control:259 - ++ Deltas: [-4287, -4318, -4380, -4236, -4439, -4398]
+2022-07-18 15:22:08,879 - hm_mb_control - MainThread - INFO - hm-mb-control:261 - ++ Correction factor: 5.0
+2022-07-18 15:22:08,879 - hm_mb_control - MainThread - INFO - hm-mb-control:267 - ++ PV percentage uncorrected: 145.26923076923077
+2022-07-18 15:22:08,879 - hm_mb_control - MainThread - INFO - hm-mb-control:273 - ++ PV power setpoint: 7554
+2022-07-18 15:22:08,879 - hm_mb_control - MainThread - INFO - hm-mb-control:274 - ++ Write 100% to 0xc001
+2022-07-18 15:22:09,078 - hm_mb_control - MainThread - INFO - hm-mb-control:276 - ++ Response: WriteRegisterResponse 49153 => 100
+2022-07-18 15:22:19,090 - hm_mb_control - MainThread - INFO - hm-mb-control:385 - get input variables from Victron
+2022-07-18 15:22:19,109 - hm_mb_control - MainThread - INFO - hm-mb-control:216 - ++ SOC: 99
+2022-07-18 15:22:19,109 - hm_mb_control - MainThread - INFO - hm-mb-control:217 - ++ Grid power L1: -1019
+2022-07-18 15:22:19,109 - hm_mb_control - MainThread - INFO - hm-mb-control:218 - ++ Grid power L2: 29
+2022-07-18 15:22:19,109 - hm_mb_control - MainThread - INFO - hm-mb-control:219 - ++ Grid power L3: 1095
+2022-07-18 15:22:19,110 - hm_mb_control - MainThread - INFO - hm-mb-control:220 - ++ Grid power total: 105
+2022-07-18 15:22:19,110 - hm_mb_control - MainThread - INFO - hm-mb-control:221 - ++ AC out power L1: 1559
+2022-07-18 15:22:19,110 - hm_mb_control - MainThread - INFO - hm-mb-control:222 - ++ AC out power L2: 2636
+2022-07-18 15:22:19,110 - hm_mb_control - MainThread - INFO - hm-mb-control:223 - ++ AC out power L3: 3925
+2022-07-18 15:22:19,110 - hm_mb_control - MainThread - INFO - hm-mb-control:224 - ++ AC out power total: 8120
+2022-07-18 15:22:19,110 - hm_mb_control - MainThread - INFO - hm-mb-control:225 - ++ PV power L1: 919
+2022-07-18 15:22:19,110 - hm_mb_control - MainThread - INFO - hm-mb-control:226 - ++ PV power L2: 1156
+2022-07-18 15:22:19,111 - hm_mb_control - MainThread - INFO - hm-mb-control:227 - ++ PV power L3: 1119
+2022-07-18 15:22:19,111 - hm_mb_control - MainThread - INFO - hm-mb-control:228 - ++ PV power total: 3194
+2022-07-18 15:22:19,111 - hm_mb_control - MainThread - INFO - hm-mb-control:229 - ++ Charge power: -4398
+2022-07-18 15:22:19,111 - hm_mb_control - MainThread - INFO - hm-mb-control:230 - ++ Controller setpoint: 100
+2022-07-18 15:22:19,111 - hm_mb_control - MainThread - INFO - hm-mb-control:231 - ++ Controller status (controlling?): True
+2022-07-18 15:22:19,111 - hm_mb_control - MainThread - INFO - hm-mb-control:392 - SOC is 99! Control loop started...
+2022-07-18 15:22:19,112 - hm_mb_control - MainThread - INFO - hm-mb-control:259 - ++ Deltas: [-4360, -4287, -4318, -4380, -4236, -4439]
+2022-07-18 15:22:19,112 - hm_mb_control - MainThread - INFO - hm-mb-control:261 - ++ Correction factor: 5.0
+2022-07-18 15:22:19,112 - hm_mb_control - MainThread - INFO - hm-mb-control:267 - ++ PV percentage uncorrected: 148.40384615384616
+2022-07-18 15:22:19,112 - hm_mb_control - MainThread - INFO - hm-mb-control:273 - ++ PV power setpoint: 7717
+2022-07-18 15:22:19,112 - hm_mb_control - MainThread - INFO - hm-mb-control:274 - ++ Write 100% to 0xc001
+2022-07-18 15:22:19,132 - hm_mb_control - MainThread - INFO - hm-mb-control:276 - ++ Response: WriteRegisterResponse 49153 => 100
+2022-07-18 15:22:29,142 - hm_mb_control - MainThread - INFO - hm-mb-control:385 - get input variables from Victron
+2022-07-18 15:22:29,153 - hm_mb_control - MainThread - INFO - hm-mb-control:216 - ++ SOC: 99
+2022-07-18 15:22:29,154 - hm_mb_control - MainThread - INFO - hm-mb-control:217 - ++ Grid power L1: -944
+2022-07-18 15:22:29,154 - hm_mb_control - MainThread - INFO - hm-mb-control:218 - ++ Grid power L2: -423
+2022-07-18 15:22:29,154 - hm_mb_control - MainThread - INFO - hm-mb-control:219 - ++ Grid power L3: 1285
+2022-07-18 15:22:29,154 - hm_mb_control - MainThread - INFO - hm-mb-control:220 - ++ Grid power total: -82
+2022-07-18 15:22:29,154 - hm_mb_control - MainThread - INFO - hm-mb-control:221 - ++ AC out power L1: 1627
+2022-07-18 15:22:29,154 - hm_mb_control - MainThread - INFO - hm-mb-control:222 - ++ AC out power L2: 2064
+2022-07-18 15:22:29,154 - hm_mb_control - MainThread - INFO - hm-mb-control:223 - ++ AC out power L3: 4081
+2022-07-18 15:22:29,155 - hm_mb_control - MainThread - INFO - hm-mb-control:224 - ++ AC out power total: 7772
+2022-07-18 15:22:29,155 - hm_mb_control - MainThread - INFO - hm-mb-control:225 - ++ PV power L1: 907
+2022-07-18 15:22:29,156 - hm_mb_control - MainThread - INFO - hm-mb-control:226 - ++ PV power L2: 1154
+2022-07-18 15:22:29,156 - hm_mb_control - MainThread - INFO - hm-mb-control:227 - ++ PV power L3: 1122
+2022-07-18 15:22:29,156 - hm_mb_control - MainThread - INFO - hm-mb-control:228 - ++ PV power total: 3183
+2022-07-18 15:22:29,156 - hm_mb_control - MainThread - INFO - hm-mb-control:229 - ++ Charge power: -4230
+2022-07-18 15:22:29,157 - hm_mb_control - MainThread - INFO - hm-mb-control:230 - ++ Controller setpoint: 100
+2022-07-18 15:22:29,157 - hm_mb_control - MainThread - INFO - hm-mb-control:231 - ++ Controller status (controlling?): True
+2022-07-18 15:22:29,157 - hm_mb_control - MainThread - INFO - hm-mb-control:392 - SOC is 99! Control loop started...
+2022-07-18 15:22:29,157 - hm_mb_control - MainThread - INFO - hm-mb-control:259 - ++ Deltas: [-4534, -4360, -4287, -4318, -4380, -4236]
+2022-07-18 15:22:29,157 - hm_mb_control - MainThread - INFO - hm-mb-control:261 - ++ Correction factor: 5.0
+2022-07-18 15:22:29,157 - hm_mb_control - MainThread - INFO - hm-mb-control:267 - ++ PV percentage uncorrected: 141.3653846153846
+2022-07-18 15:22:29,158 - hm_mb_control - MainThread - INFO - hm-mb-control:273 - ++ PV power setpoint: 7351
+2022-07-18 15:22:29,158 - hm_mb_control - MainThread - INFO - hm-mb-control:274 - ++ Write 100% to 0xc001
+2022-07-18 15:22:29,380 - hm_mb_control - MainThread - INFO - hm-mb-control:276 - ++ Response: WriteRegisterResponse 49153 => 100
+2022-07-18 15:22:39,392 - hm_mb_control - MainThread - INFO - hm-mb-control:385 - get input variables from Victron
+2022-07-18 15:22:39,404 - hm_mb_control - MainThread - INFO - hm-mb-control:216 - ++ SOC: 99
+2022-07-18 15:22:39,405 - hm_mb_control - MainThread - INFO - hm-mb-control:217 - ++ Grid power L1: -777
+2022-07-18 15:22:39,406 - hm_mb_control - MainThread - INFO - hm-mb-control:218 - ++ Grid power L2: -510
+2022-07-18 15:22:39,406 - hm_mb_control - MainThread - INFO - hm-mb-control:219 - ++ Grid power L3: 1278
+2022-07-18 15:22:39,406 - hm_mb_control - MainThread - INFO - hm-mb-control:220 - ++ Grid power total: -9
+2022-07-18 15:22:39,406 - hm_mb_control - MainThread - INFO - hm-mb-control:221 - ++ AC out power L1: 1625
+2022-07-18 15:22:39,406 - hm_mb_control - MainThread - INFO - hm-mb-control:222 - ++ AC out power L2: 2070
+2022-07-18 15:22:39,406 - hm_mb_control - MainThread - INFO - hm-mb-control:223 - ++ AC out power L3: 3897
+2022-07-18 15:22:39,407 - hm_mb_control - MainThread - INFO - hm-mb-control:224 - ++ AC out power total: 7592
+2022-07-18 15:22:39,407 - hm_mb_control - MainThread - INFO - hm-mb-control:225 - ++ PV power L1: 913
+2022-07-18 15:22:39,407 - hm_mb_control - MainThread - INFO - hm-mb-control:226 - ++ PV power L2: 1155
+2022-07-18 15:22:39,407 - hm_mb_control - MainThread - INFO - hm-mb-control:227 - ++ PV power L3: 1122
+2022-07-18 15:22:39,407 - hm_mb_control - MainThread - INFO - hm-mb-control:228 - ++ PV power total: 3190
+2022-07-18 15:22:39,407 - hm_mb_control - MainThread - INFO - hm-mb-control:229 - ++ Charge power: -4290
+2022-07-18 15:22:39,407 - hm_mb_control - MainThread - INFO - hm-mb-control:230 - ++ Controller setpoint: 100
+2022-07-18 15:22:39,408 - hm_mb_control - MainThread - INFO - hm-mb-control:231 - ++ Controller status (controlling?): True
+2022-07-18 15:22:39,408 - hm_mb_control - MainThread - INFO - hm-mb-control:392 - SOC is 99! Control loop started...
+2022-07-18 15:22:39,408 - hm_mb_control - MainThread - INFO - hm-mb-control:259 - ++ Deltas: [-4161, -4534, -4360, -4287, -4318, -4380]
+2022-07-18 15:22:39,408 - hm_mb_control - MainThread - INFO - hm-mb-control:261 - ++ Correction factor: 5.0
+2022-07-18 15:22:39,408 - hm_mb_control - MainThread - INFO - hm-mb-control:267 - ++ PV percentage uncorrected: 144.0576923076923
+2022-07-18 15:22:39,408 - hm_mb_control - MainThread - INFO - hm-mb-control:273 - ++ PV power setpoint: 7491
+2022-07-18 15:22:39,409 - hm_mb_control - MainThread - INFO - hm-mb-control:274 - ++ Write 100% to 0xc001
+2022-07-18 15:22:39,635 - hm_mb_control - MainThread - INFO - hm-mb-control:276 - ++ Response: WriteRegisterResponse 49153 => 100
+2022-07-18 15:22:49,647 - hm_mb_control - MainThread - INFO - hm-mb-control:385 - get input variables from Victron
+2022-07-18 15:22:49,659 - hm_mb_control - MainThread - INFO - hm-mb-control:216 - ++ SOC: 99
+2022-07-18 15:22:49,659 - hm_mb_control - MainThread - INFO - hm-mb-control:217 - ++ Grid power L1: -758
+2022-07-18 15:22:49,659 - hm_mb_control - MainThread - INFO - hm-mb-control:218 - ++ Grid power L2: -503
+2022-07-18 15:22:49,659 - hm_mb_control - MainThread - INFO - hm-mb-control:219 - ++ Grid power L3: 1382
+2022-07-18 15:22:49,659 - hm_mb_control - MainThread - INFO - hm-mb-control:220 - ++ Grid power total: 121
+2022-07-18 15:22:49,660 - hm_mb_control - MainThread - INFO - hm-mb-control:221 - ++ AC out power L1: 1581
+2022-07-18 15:22:49,660 - hm_mb_control - MainThread - INFO - hm-mb-control:222 - ++ AC out power L2: 2096
+2022-07-18 15:22:49,660 - hm_mb_control - MainThread - INFO - hm-mb-control:223 - ++ AC out power L3: 3944
+2022-07-18 15:22:49,660 - hm_mb_control - MainThread - INFO - hm-mb-control:224 - ++ AC out power total: 7621
+2022-07-18 15:22:49,660 - hm_mb_control - MainThread - INFO - hm-mb-control:225 - ++ PV power L1: 913
+2022-07-18 15:22:49,661 - hm_mb_control - MainThread - INFO - hm-mb-control:226 - ++ PV power L2: 1155
+2022-07-18 15:22:49,661 - hm_mb_control - MainThread - INFO - hm-mb-control:227 - ++ PV power L3: 1120
+2022-07-18 15:22:49,661 - hm_mb_control - MainThread - INFO - hm-mb-control:228 - ++ PV power total: 3188
+2022-07-18 15:22:49,661 - hm_mb_control - MainThread - INFO - hm-mb-control:229 - ++ Charge power: -4258
+2022-07-18 15:22:49,661 - hm_mb_control - MainThread - INFO - hm-mb-control:230 - ++ Controller setpoint: 100
+2022-07-18 15:22:49,662 - hm_mb_control - MainThread - INFO - hm-mb-control:231 - ++ Controller status (controlling?): True
+2022-07-18 15:22:49,662 - hm_mb_control - MainThread - INFO - hm-mb-control:392 - SOC is 99! Control loop started...
+2022-07-18 15:22:49,662 - hm_mb_control - MainThread - INFO - hm-mb-control:259 - ++ Deltas: [-4303, -4161, -4534, -4360, -4287, -4318]
+2022-07-18 15:22:49,662 - hm_mb_control - MainThread - INFO - hm-mb-control:261 - ++ Correction factor: 5.0
+2022-07-18 15:22:49,662 - hm_mb_control - MainThread - INFO - hm-mb-control:267 - ++ PV percentage uncorrected: 145.90384615384616
+2022-07-18 15:22:49,663 - hm_mb_control - MainThread - INFO - hm-mb-control:273 - ++ PV power setpoint: 7587
+2022-07-18 15:22:49,663 - hm_mb_control - MainThread - INFO - hm-mb-control:274 - ++ Write 100% to 0xc001
+2022-07-18 15:22:49,906 - hm_mb_control - MainThread - INFO - hm-mb-control:276 - ++ Response: WriteRegisterResponse 49153 => 100
+2022-07-18 15:22:59,920 - hm_mb_control - MainThread - INFO - hm-mb-control:385 - get input variables from Victron
+2022-07-18 15:22:59,936 - hm_mb_control - MainThread - INFO - hm-mb-control:216 - ++ SOC: 99
+2022-07-18 15:22:59,936 - hm_mb_control - MainThread - INFO - hm-mb-control:217 - ++ Grid power L1: -821
+2022-07-18 15:22:59,937 - hm_mb_control - MainThread - INFO - hm-mb-control:218 - ++ Grid power L2: -499
+2022-07-18 15:22:59,937 - hm_mb_control - MainThread - INFO - hm-mb-control:219 - ++ Grid power L3: 1304
+2022-07-18 15:22:59,937 - hm_mb_control - MainThread - INFO - hm-mb-control:220 - ++ Grid power total: -16
+2022-07-18 15:22:59,938 - hm_mb_control - MainThread - INFO - hm-mb-control:221 - ++ AC out power L1: 1554
+2022-07-18 15:22:59,938 - hm_mb_control - MainThread - INFO - hm-mb-control:222 - ++ AC out power L2: 2098
+2022-07-18 15:22:59,939 - hm_mb_control - MainThread - INFO - hm-mb-control:223 - ++ AC out power L3: 3926
+2022-07-18 15:22:59,940 - hm_mb_control - MainThread - INFO - hm-mb-control:224 - ++ AC out power total: 7578
+2022-07-18 15:22:59,940 - hm_mb_control - MainThread - INFO - hm-mb-control:225 - ++ PV power L1: 919
+2022-07-18 15:22:59,941 - hm_mb_control - MainThread - INFO - hm-mb-control:226 - ++ PV power L2: 1157
+2022-07-18 15:22:59,941 - hm_mb_control - MainThread - INFO - hm-mb-control:227 - ++ PV power L3: 1123
+2022-07-18 15:22:59,941 - hm_mb_control - MainThread - INFO - hm-mb-control:228 - ++ PV power total: 3199
+2022-07-18 15:22:59,941 - hm_mb_control - MainThread - INFO - hm-mb-control:229 - ++ Charge power: -4230
+2022-07-18 15:22:59,941 - hm_mb_control - MainThread - INFO - hm-mb-control:230 - ++ Controller setpoint: 100
+2022-07-18 15:22:59,942 - hm_mb_control - MainThread - INFO - hm-mb-control:231 - ++ Controller status (controlling?): True
+2022-07-18 15:22:59,942 - hm_mb_control - MainThread - INFO - hm-mb-control:392 - SOC is 99! Control loop started...
+2022-07-18 15:22:59,942 - hm_mb_control - MainThread - INFO - hm-mb-control:259 - ++ Deltas: [-4388, -4303, -4161, -4534, -4360, -4287]
+2022-07-18 15:22:59,942 - hm_mb_control - MainThread - INFO - hm-mb-control:261 - ++ Correction factor: 5.0
+2022-07-18 15:22:59,942 - hm_mb_control - MainThread - INFO - hm-mb-control:267 - ++ PV percentage uncorrected: 142.94230769230768
+2022-07-18 15:22:59,943 - hm_mb_control - MainThread - INFO - hm-mb-control:273 - ++ PV power setpoint: 7433
+2022-07-18 15:22:59,943 - hm_mb_control - MainThread - INFO - hm-mb-control:274 - ++ Write 100% to 0xc001
+2022-07-18 15:23:00,157 - hm_mb_control - MainThread - INFO - hm-mb-control:276 - ++ Response: WriteRegisterResponse 49153 => 100
+2022-07-18 15:23:10,170 - hm_mb_control - MainThread - INFO - hm-mb-control:385 - get input variables from Victron
+2022-07-18 15:23:10,183 - hm_mb_control - MainThread - INFO - hm-mb-control:216 - ++ SOC: 99
+2022-07-18 15:23:10,184 - hm_mb_control - MainThread - INFO - hm-mb-control:217 - ++ Grid power L1: -882
+2022-07-18 15:23:10,185 - hm_mb_control - MainThread - INFO - hm-mb-control:218 - ++ Grid power L2: -482
+2022-07-18 15:23:10,186 - hm_mb_control - MainThread - INFO - hm-mb-control:219 - ++ Grid power L3: 1341
+2022-07-18 15:23:10,186 - hm_mb_control - MainThread - INFO - hm-mb-control:220 - ++ Grid power total: -23
+2022-07-18 15:23:10,187 - hm_mb_control - MainThread - INFO - hm-mb-control:221 - ++ AC out power L1: 1539
+2022-07-18 15:23:10,187 - hm_mb_control - MainThread - INFO - hm-mb-control:222 - ++ AC out power L2: 2100
+2022-07-18 15:23:10,188 - hm_mb_control - MainThread - INFO - hm-mb-control:223 - ++ AC out power L3: 3902
+2022-07-18 15:23:10,188 - hm_mb_control - MainThread - INFO - hm-mb-control:224 - ++ AC out power total: 7541
+2022-07-18 15:23:10,189 - hm_mb_control - MainThread - INFO - hm-mb-control:225 - ++ PV power L1: 915
+2022-07-18 15:23:10,190 - hm_mb_control - MainThread - INFO - hm-mb-control:226 - ++ PV power L2: 1159
+2022-07-18 15:23:10,190 - hm_mb_control - MainThread - INFO - hm-mb-control:227 - ++ PV power L3: 1130
+2022-07-18 15:23:10,191 - hm_mb_control - MainThread - INFO - hm-mb-control:228 - ++ PV power total: 3204
+2022-07-18 15:23:10,192 - hm_mb_control - MainThread - INFO - hm-mb-control:229 - ++ Charge power: -4156
+2022-07-18 15:23:10,192 - hm_mb_control - MainThread - INFO - hm-mb-control:230 - ++ Controller setpoint: 100
+2022-07-18 15:23:10,193 - hm_mb_control - MainThread - INFO - hm-mb-control:231 - ++ Controller status (controlling?): True
+2022-07-18 15:23:10,193 - hm_mb_control - MainThread - INFO - hm-mb-control:392 - SOC is 99! Control loop started...
+2022-07-18 15:23:10,194 - hm_mb_control - MainThread - INFO - hm-mb-control:259 - ++ Deltas: [-4229, -4388, -4303, -4161, -4534, -4360]
+2022-07-18 15:23:10,194 - hm_mb_control - MainThread - INFO - hm-mb-control:261 - ++ Correction factor: 5.0
+2022-07-18 15:23:10,195 - hm_mb_control - MainThread - INFO - hm-mb-control:267 - ++ PV percentage uncorrected: 141.48076923076923
+2022-07-18 15:23:10,195 - hm_mb_control - MainThread - INFO - hm-mb-control:273 - ++ PV power setpoint: 7357
+2022-07-18 15:23:10,196 - hm_mb_control - MainThread - INFO - hm-mb-control:274 - ++ Write 100% to 0xc001
+2022-07-18 15:23:10,411 - hm_mb_control - MainThread - INFO - hm-mb-control:276 - ++ Response: WriteRegisterResponse 49153 => 100
+2022-07-18 15:23:20,423 - hm_mb_control - MainThread - INFO - hm-mb-control:385 - get input variables from Victron
+2022-07-18 15:23:20,437 - hm_mb_control - MainThread - INFO - hm-mb-control:216 - ++ SOC: 99
+2022-07-18 15:23:20,438 - hm_mb_control - MainThread - INFO - hm-mb-control:217 - ++ Grid power L1: -808
+2022-07-18 15:23:20,438 - hm_mb_control - MainThread - INFO - hm-mb-control:218 - ++ Grid power L2: -530
+2022-07-18 15:23:20,439 - hm_mb_control - MainThread - INFO - hm-mb-control:219 - ++ Grid power L3: 1294
+2022-07-18 15:23:20,439 - hm_mb_control - MainThread - INFO - hm-mb-control:220 - ++ Grid power total: -44
+2022-07-18 15:23:20,440 - hm_mb_control - MainThread - INFO - hm-mb-control:221 - ++ AC out power L1: 1537
+2022-07-18 15:23:20,440 - hm_mb_control - MainThread - INFO - hm-mb-control:222 - ++ AC out power L2: 2079
+2022-07-18 15:23:20,441 - hm_mb_control - MainThread - INFO - hm-mb-control:223 - ++ AC out power L3: 3891
+2022-07-18 15:23:20,441 - hm_mb_control - MainThread - INFO - hm-mb-control:224 - ++ AC out power total: 7507
+2022-07-18 15:23:20,441 - hm_mb_control - MainThread - INFO - hm-mb-control:225 - ++ PV power L1: 923
+2022-07-18 15:23:20,442 - hm_mb_control - MainThread - INFO - hm-mb-control:226 - ++ PV power L2: 1164
+2022-07-18 15:23:20,442 - hm_mb_control - MainThread - INFO - hm-mb-control:227 - ++ PV power L3: 1131
+2022-07-18 15:23:20,443 - hm_mb_control - MainThread - INFO - hm-mb-control:228 - ++ PV power total: 3218
+2022-07-18 15:23:20,443 - hm_mb_control - MainThread - INFO - hm-mb-control:229 - ++ Charge power: -4206
+2022-07-18 15:23:20,444 - hm_mb_control - MainThread - INFO - hm-mb-control:230 - ++ Controller setpoint: 100
+2022-07-18 15:23:20,445 - hm_mb_control - MainThread - INFO - hm-mb-control:231 - ++ Controller status (controlling?): True
+2022-07-18 15:23:20,445 - hm_mb_control - MainThread - INFO - hm-mb-control:392 - SOC is 99! Control loop started...
+2022-07-18 15:23:20,446 - hm_mb_control - MainThread - INFO - hm-mb-control:259 - ++ Deltas: [-4139, -4229, -4388, -4303, -4161, -4534]
+2022-07-18 15:23:20,447 - hm_mb_control - MainThread - INFO - hm-mb-control:261 - ++ Correction factor: 5.0
+2022-07-18 15:23:20,448 - hm_mb_control - MainThread - INFO - hm-mb-control:267 - ++ PV percentage uncorrected: 142.30769230769232
+2022-07-18 15:23:20,448 - hm_mb_control - MainThread - INFO - hm-mb-control:273 - ++ PV power setpoint: 7400
+2022-07-18 15:23:20,449 - hm_mb_control - MainThread - INFO - hm-mb-control:274 - ++ Write 100% to 0xc001
+2022-07-18 15:23:20,673 - hm_mb_control - MainThread - INFO - hm-mb-control:276 - ++ Response: WriteRegisterResponse 49153 => 100
