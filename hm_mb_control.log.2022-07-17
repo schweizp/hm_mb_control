@@ -28859,3 +28859,37 @@ AssertionError
 2022-07-18 15:23:30,731 - hm_mb_control - MainThread - INFO - hm-mb-control:229 - ++ Charge power: -4196
 2022-07-18 15:23:30,731 - hm_mb_control - MainThread - INFO - hm-mb-control:230 - ++ Controller setpoint: 100
 2022-07-18 15:23:30,731 - hm_mb_control - MainThread - INFO - hm-mb-control:231 - ++ Controller status (controlling?): True
+2022-07-18 15:24:30,802 - hm_mb_control - MainThread - INFO - hm-mb-control:385 - get input variables from Victron
+2022-07-18 15:24:30,819 - hm_mb_control - MainThread - INFO - hm-mb-control:216 - ++ SOC: 98
+2022-07-18 15:24:30,820 - hm_mb_control - MainThread - INFO - hm-mb-control:217 - ++ Grid power L1: -849
+2022-07-18 15:24:30,821 - hm_mb_control - MainThread - INFO - hm-mb-control:218 - ++ Grid power L2: -459
+2022-07-18 15:24:30,821 - hm_mb_control - MainThread - INFO - hm-mb-control:219 - ++ Grid power L3: 1292
+2022-07-18 15:24:30,823 - hm_mb_control - MainThread - INFO - hm-mb-control:220 - ++ Grid power total: -16
+2022-07-18 15:24:30,824 - hm_mb_control - MainThread - INFO - hm-mb-control:221 - ++ AC out power L1: 1566
+2022-07-18 15:24:30,824 - hm_mb_control - MainThread - INFO - hm-mb-control:222 - ++ AC out power L2: 2167
+2022-07-18 15:24:30,825 - hm_mb_control - MainThread - INFO - hm-mb-control:223 - ++ AC out power L3: 3863
+2022-07-18 15:24:30,826 - hm_mb_control - MainThread - INFO - hm-mb-control:224 - ++ AC out power total: 7596
+2022-07-18 15:24:30,826 - hm_mb_control - MainThread - INFO - hm-mb-control:225 - ++ PV power L1: 913
+2022-07-18 15:24:30,827 - hm_mb_control - MainThread - INFO - hm-mb-control:226 - ++ PV power L2: 1153
+2022-07-18 15:24:30,828 - hm_mb_control - MainThread - INFO - hm-mb-control:227 - ++ PV power L3: 1120
+2022-07-18 15:24:30,828 - hm_mb_control - MainThread - INFO - hm-mb-control:228 - ++ PV power total: 3186
+2022-07-18 15:24:30,829 - hm_mb_control - MainThread - INFO - hm-mb-control:229 - ++ Charge power: -4282
+2022-07-18 15:24:30,830 - hm_mb_control - MainThread - INFO - hm-mb-control:230 - ++ Controller setpoint: 100
+2022-07-18 15:24:30,830 - hm_mb_control - MainThread - INFO - hm-mb-control:231 - ++ Controller status (controlling?): False
+2022-07-18 15:25:30,901 - hm_mb_control - MainThread - INFO - hm-mb-control:385 - get input variables from Victron
+2022-07-18 15:25:30,914 - hm_mb_control - MainThread - INFO - hm-mb-control:216 - ++ SOC: 98
+2022-07-18 15:25:30,916 - hm_mb_control - MainThread - INFO - hm-mb-control:217 - ++ Grid power L1: -176
+2022-07-18 15:25:30,916 - hm_mb_control - MainThread - INFO - hm-mb-control:218 - ++ Grid power L2: 147
+2022-07-18 15:25:30,916 - hm_mb_control - MainThread - INFO - hm-mb-control:219 - ++ Grid power L3: 96
+2022-07-18 15:25:30,917 - hm_mb_control - MainThread - INFO - hm-mb-control:220 - ++ Grid power total: 67
+2022-07-18 15:25:30,917 - hm_mb_control - MainThread - INFO - hm-mb-control:221 - ++ AC out power L1: 1834
+2022-07-18 15:25:30,918 - hm_mb_control - MainThread - INFO - hm-mb-control:222 - ++ AC out power L2: 2439
+2022-07-18 15:25:30,918 - hm_mb_control - MainThread - INFO - hm-mb-control:223 - ++ AC out power L3: 2006
+2022-07-18 15:25:30,918 - hm_mb_control - MainThread - INFO - hm-mb-control:224 - ++ AC out power total: 6279
+2022-07-18 15:25:30,919 - hm_mb_control - MainThread - INFO - hm-mb-control:225 - ++ PV power L1: 903
+2022-07-18 15:25:30,919 - hm_mb_control - MainThread - INFO - hm-mb-control:226 - ++ PV power L2: 1147
+2022-07-18 15:25:30,919 - hm_mb_control - MainThread - INFO - hm-mb-control:227 - ++ PV power L3: 1116
+2022-07-18 15:25:30,920 - hm_mb_control - MainThread - INFO - hm-mb-control:228 - ++ PV power total: 3166
+2022-07-18 15:25:30,920 - hm_mb_control - MainThread - INFO - hm-mb-control:229 - ++ Charge power: -2344
+2022-07-18 15:25:30,921 - hm_mb_control - MainThread - INFO - hm-mb-control:230 - ++ Controller setpoint: 100
+2022-07-18 15:25:30,921 - hm_mb_control - MainThread - INFO - hm-mb-control:231 - ++ Controller status (controlling?): False
