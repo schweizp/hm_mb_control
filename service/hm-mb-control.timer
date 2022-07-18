@@ -1,0 +1,8 @@
+[Unit]
+Description=Run hm-mb-control after 1 minute delay
+
+[Timer]
+OnBootSec=1min
+
+[Install]
+WantedBy=timers.target

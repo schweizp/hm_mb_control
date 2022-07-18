@@ -1,0 +1,12 @@
+[Unit]
+Description=<Control Script for Hoymiles microinverters>
+After=network.target
+
+[Service]
+WorkingDirectory=/home/schweizp/Downloads/hm-mb-control
+ExecStart=/usr/bin/python3 /home/schweizp/Downloads/hm-mb-control/hm-mb-control.py
+User=schweizp
+Group=schweizp
+
+[Install]
+WantedBy=mulit-user.target
