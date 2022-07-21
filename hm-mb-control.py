@@ -5,6 +5,13 @@ Script for controlling Hoymiles microinverters by modbus commands
 Inputs: Power values from the victron system 
 (Grid in, PV in, AC out, Chargepower, system state)
 -------------------------------------------------------------------------
+
+ToDo:
+- do not only react to change of control flag, but also check regularly
+  is important in case of restart / connection loss
+- check if taking battery voltage / SOC into account for control loop
+  could be an improvement 
+
 """
 
 import os
