@@ -7,10 +7,9 @@ Inputs: Power values from the victron system
 -------------------------------------------------------------------------
 
 ToDo:
-- do not only react to change of control flag, but also check regularly
-  is important in case of restart / connection loss
 - check if taking battery voltage / SOC into account for control loop
-  could be an improvement 
+  could be an improvement, need to differentiate between Absorbtion and
+  Float condition (absorbtion voltage: 55,2V; float voltage: 53,6V)
 
 """
 
@@ -87,6 +86,9 @@ VEBUS_UNIT = 238    # unit ID for the VE.Bus system
 # setup mqtt infos
 PORT = 1883
 BROKER = "mosquitto.fritz.box"
+# voltage levels
+V_ABSORPTION = 55.2     # absorption voltage 55.2V
+V_FLOAT = 53.6          # float voltage 53.6V
 
 # global variables
 soc = 0				    # state of charge of the battery
@@ -98,6 +100,7 @@ veBusState = 0          # VE.Bus state
                         # 0=Off;1=Low Power;2=Fault;3=Bulk;4=Absorption;5=Float;6=Storage;
                         # 7=Equalize;8=Passthru;9=Inverting;10=Power assist;
                         # 11=Power supply;252=Bulk protection
+batteryVoltage = 0.0    # battery voltage
 setPercentage = 100     # setpoint (in %) for PV inverter power (calculated by control algo)
 isControlling = False   # control loop is running?
 autoControl = True      # automatic HM control on/off (via mqtt remote control)
@@ -161,6 +164,7 @@ def get_inputs():
     global acPVTotal
     global charge
     global veBusState
+    global batteryVoltage
     global setPercentage
     global isControlling
 
@@ -203,6 +207,11 @@ def get_inputs():
     assert(not rr.isError())     # test that we are not an error
     decoder = BinaryPayloadDecoder.fromRegisters(rr.registers, byteorder=Endian.Big, wordorder=Endian.Big)
     veBusState = decoder.decode_16bit_uint()
+    # get battery voltage
+    rr = vic_client.read_holding_registers(26, 1, unit=VEBUS_UNIT)   # battery voltage    assert(not rr.isError())     # test that we are not an error
+    decoder = BinaryPayloadDecoder.fromRegisters(rr.registers, byteorder=Endian.Big, wordorder=Endian.Big)
+    batteryVoltage = float(decoder.decode_16bit_uint() / 100.0)
+
 
  
     # publish info to mqtt broker
@@ -233,6 +242,7 @@ def get_inputs():
     log.info("++ PV power L2: " + str(acPVL2))
     log.info("++ PV power L3: " + str(acPVL3))
     log.info("++ PV power total: " + str(acPVTotal))
+    log.info("++ Battery voltage: " + str(batteryVoltage))
     log.info("++ Charge power: " + str(charge))
     log.info("++ Controller setpoint: " + str(setPercentage))
     log.info("++ Controller status (controlling?): " + str(isControlling))
@@ -264,7 +274,7 @@ def autocontrol_pv():
         shiftDeltas()           # shift the "Delta-Register" one position to the past
         setDeltas[0] = acPVTotal - setpoint    # determine actual delta
         log.info("++ Deltas: " + str(setDeltas))
-        corr = getCorr()                   # calculate correction     
+        corr = getCorr()                   # calculate correction based on past deltas & battery voltage   
         log.info ("++ Correction factor: " + str(corr))
 
         # setpoint = acOutTotal + chargeSet     # define setpoint of PV-System (+fixed offset if needed?????)
@@ -284,19 +294,43 @@ def autocontrol_pv():
 
 # ---
 # calculate correction value for automatic algo based on deltas in 6 past cycles
+# and battery voltage level
 # ---
 def getCorr():
 
     global setDeltas
+    global veBusState
+    global batteryVoltage
 
-    v = 0       # value is 0 per default
-    sum = 0     # sum of wighted deltas
+    v = 0               # value is 0 per default
+    sum = 0             # sum of wighted deltas
+    voltDelta = 0.0     # voltage delta
 
+    # correction factor based on deltas in 6 past cycles
     for i in range(6):
         sum = sum + setDeltas[i] / 2 ** i
 
     v = -0.05 * sum
 
+    # additional correction based on battery voltage level
+    if veBusState == 4:                 # we are in absorption state
+        voltDelta = V_ABSORPTION - batteryVoltage
+        c = voltDelta / V_ABSORPTION * 100
+    elif veBusState == 5:               # we are in float state
+        voltDelta = V_FLOAT - batteryVoltage
+        c = voltDelta / V_FLOAT * 100
+    else: 
+        c = 0.0
+
+    if c < 0.0:             # limit c to positive values
+        c = 0.0
+
+    log.info('++++ Voltage Delta: {:1.2f}'.format(voltDelta))
+    log.info('++++ Voltage correction factor: {:1.2f}'.format(c))
+
+    v = v + c               # add voltage correction    
+
+    # limit amount of correction
     if v > 5.0:
         v = 5.0
     if v < -5.0:
@@ -356,7 +390,7 @@ def startupSequence():
     setPercentage = 100
     rq =hm_client.write_register(0xC001, setPercentage, unit=HM_UNIT)
     log.info("++ Response: " + str(rq))
-
+    
 
 # ---
 # main part of the script
@@ -395,7 +429,6 @@ if __name__ == "__main__":
                         # log.debug("-->SOC: " + str(soc))
                         if autoControl == True:
                             if soc > 98 or veBusState == 4 or veBusState == 5: # SOC high or Absorbtion or Float
-                            # if soc > 98:
                                 log.info("SOC is " + str(soc) + "! Control loop started...")
                                 isControlling = True
                                 autocontrol_pv()
