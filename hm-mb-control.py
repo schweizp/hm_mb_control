@@ -7,9 +7,6 @@ Inputs: Power values from the victron system
 -------------------------------------------------------------------------
 
 ToDo:
-- check if taking battery voltage / SOC into account for control loop
-  could be an improvement, need to differentiate between Absorbtion and
-  Float condition (absorbtion voltage: 55,2V; float voltage: 53,6V)
 
 """
 
