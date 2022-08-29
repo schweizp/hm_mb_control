@@ -429,7 +429,7 @@ if __name__ == "__main__":
                                 log.info("SOC is " + str(soc) + "! Control loop started...")
                                 isControlling = True
                                 autocontrol_pv()
-                                interval = 10.0     # shorten timeinterval to 10s during control action
+                                interval = 20.0     # shorten timeinterval to 10s during control action
                             elif setPercentage < 100: 
                                 log.info("Resetting PV power to 100%")
                                 fullpower_pv()      # reset PV to full power
