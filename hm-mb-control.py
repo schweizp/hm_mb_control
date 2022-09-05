@@ -106,6 +106,7 @@ setpointPrev = 0        # setpoint in W from last control algo run
 setDeltas = [0, 0, 0, 0, 0, 0]
                         # delta PV-power setpoint to delivered PV-power for the last 6 runs
 powerSetpoint = 100     # power setpoint for manual control (via mqtt remote control)
+hmResponse = ''         # response string from hoymiles on power percentage setting
 
 # The callback for when the mqtt client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
@@ -164,6 +165,7 @@ def get_inputs():
     global batteryVoltage
     global setPercentage
     global isControlling
+    global hmResponse
 
     # get SOC
     rr = vic_client.read_holding_registers(843, 1, unit=VIC_UNIT)   # SOC
@@ -205,7 +207,8 @@ def get_inputs():
     decoder = BinaryPayloadDecoder.fromRegisters(rr.registers, byteorder=Endian.Big, wordorder=Endian.Big)
     veBusState = decoder.decode_16bit_uint()
     # get battery voltage
-    rr = vic_client.read_holding_registers(26, 1, unit=VEBUS_UNIT)   # battery voltage    assert(not rr.isError())     # test that we are not an error
+    rr = vic_client.read_holding_registers(26, 1, unit=VEBUS_UNIT)   # battery voltage    
+    assert(not rr.isError())     # test that we are not an error
     decoder = BinaryPayloadDecoder.fromRegisters(rr.registers, byteorder=Endian.Big, wordorder=Endian.Big)
     batteryVoltage = float(decoder.decode_16bit_uint() / 100.0)
 
@@ -225,6 +228,7 @@ def get_inputs():
     mqttClient.publish('HM-Control/Info/VEBusState', veBusState)
     mqttClient.publish('HM-Control/Info/isControlling', isControlling)
     mqttClient.publish('HM-Control/Info/setPercentage', setPercentage)
+    mqttClient.publish('HM-Control/Info/hmResponse', hmResponse)
 
     log.info("++ SOC: " + str(soc))
     log.info("++ Grid power L1: " + str(gridL1))
@@ -260,7 +264,8 @@ def autocontrol_pv():
     global setPercentage
     global setpoint
     global setpointPrev
-    global setDeltas 
+    global setDeltas
+    global hmResponse 
 
     if gridTotal < 0 or gridTotal > 30 or charge < 30:    # grid feedback or too much consumption/discharge
         if charge > 0:                     # we are charging
@@ -287,7 +292,8 @@ def autocontrol_pv():
         log.info("++ PV power setpoint: " + str(setpoint))
         log.info("++ Write " + str(setPercentage) + "% to 0xc001")
         rq =hm_client.write_register(0xC001, setPercentage, unit=HM_UNIT)
-        log.info("++ Response: " + str(rq))
+        hmResponse = str(rq)
+        log.info("++ Response: " + hmResponse)
 
 # ---
 # calculate correction value for automatic algo based on deltas in 6 past cycles
@@ -408,7 +414,7 @@ if __name__ == "__main__":
     while True:
         try:            
             log.info("Startup; wait 10s to initialize communication")
-            time.sleep(10)      # wait 20s to give modbus connection time to initiates
+            time.sleep(10)      # wait 10s to give modbus connection time to initiates
             startupSequence()   # make shure after 1st start everything is in order
 
             while True:
@@ -447,7 +453,14 @@ if __name__ == "__main__":
             log.exception(sys.exc_info())
             # raise
             time.sleep(120)
+            log.error('reconnecting mqtt client')
             mqttClient.reconnect()
+            log.error('reconnecting Victron modbus client')
+            vic_client.close()
+            vic_client.connect()
+            log.error('reconnecting Hoymiles modbus client')
+            hm_client.close()
+            hm_client.connect()
 
         finally:
             log.info("finished")
