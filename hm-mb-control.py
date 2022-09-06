@@ -408,9 +408,9 @@ if __name__ == "__main__":
     nightTime = time.strptime('22:00', '%H:%M')
     morningTime = time.strptime('04:30', '%H:%M')
     
-    vic_client = ModbusClient('192.168.178.50', port=502, timeout=10, retries=5, retry_on_empty=True; close_comm_on_error=True; reconnect_delay=1000)
+    vic_client = ModbusClient('192.168.178.50', port=502, timeout=10, retries=5, retry_on_empty=True, close_comm_on_error=True, reconnect_delay=1000)
     vic_client.connect()
-    hm_client = ModbusClient('192.168.178.92', port=502, timeout=10, retries=5, retry_on_empty=True; close_comm_on_error=True; reconnect_delay=1000)
+    hm_client = ModbusClient('192.168.178.92', port=502, timeout=10, retries=5, retry_on_empty=True, close_comm_on_error=True, reconnect_delay=1000)
     hm_client.connect()
 
 
