@@ -374,7 +374,7 @@ def manualcontrol_pv():
     log.info("++ Manual control; write " + str(setPercentage) + "% to 0xc001")
     rq =hm_client.write_register(0xC001, setPercentage, unit=HM_UNIT)
     hmResponse = str(rq)
-    log.info("++ Response: " + str(rq))
+    log.info("++ Response: " + hmResponse)
 
 # ---
 # reset PV setpoint to 100%
@@ -387,7 +387,7 @@ def fullpower_pv():
     setPercentage = 100
     rq =hm_client.write_register(0xC001, setPercentage, unit=HM_UNIT)
     hmResponse = str(rq)
-    log.info("++ Response: " + str(rq))
+    log.info("++ Response: " + hmResponse)
 
 
 # ---
@@ -395,11 +395,13 @@ def fullpower_pv():
 # ---
 def startupSequence():
     global setPercentage
+    global hmResponse
 
     log.info("Startup Sequence: --> 100% PV output")
     setPercentage = 100
     rq =hm_client.write_register(0xC001, setPercentage, unit=HM_UNIT)
-    log.info("++ Response: " + str(rq))
+    hmResponse = str(rq)
+    log.info("++ Response: " + hmResponse)
     
 
 # ---
