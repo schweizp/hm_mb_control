@@ -368,10 +368,12 @@ def manualcontrol_pv():
 
     global powerSetpoint
     global setPercentage
+    global hmResponse
 
     setPercentage = powerSetpoint
     log.info("++ Manual control; write " + str(setPercentage) + "% to 0xc001")
     rq =hm_client.write_register(0xC001, setPercentage, unit=HM_UNIT)
+    hmResponse = str(rq)
     log.info("++ Response: " + str(rq))
 
 # ---
@@ -379,10 +381,12 @@ def manualcontrol_pv():
 # ---
 def fullpower_pv():
     global setPercentage
+    global hmResponse
 
     log.info("++ Write 100% to 0xc001")
     setPercentage = 100
     rq =hm_client.write_register(0xC001, setPercentage, unit=HM_UNIT)
+    hmResponse = str(rq)
     log.info("++ Response: " + str(rq))
 
 
