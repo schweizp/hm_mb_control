@@ -35,7 +35,7 @@ from collections import OrderedDict
 # --------------------------------------------------------------------------- #
 
 # from pymodbus.client.sync import ModbusTcpClient as ModbusClient        # standard modbus TCP client
-from pymodbus.client.sync import ModbusTcPDiagClient as ModbusClient    # special diagnostic modbus TCP client
+from pymodbus.client.sync import ModbusTcpDiagClient as ModbusClient    # special diagnostic modbus TCP client
 
 # from pymodbus.client.sync import ModbusUdpClient as ModbusClient
 # from pymodbus.client.sync import ModbusSerialClient as ModbusClient
